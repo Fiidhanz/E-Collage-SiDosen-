@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color:#FFDE59;
+    padding: 20px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none; /* Hide popup by default */
+}
+.popup-box .popup-content {
+    text-align: center;
+}
+.popup-box .popup-close {
+  text-align: right;
+}
+.popup-box h2 {
+    margin-top: 0;
+}
+.popup-box a {
+    margin-top: 20px;
+}
+
+  .logo img {
+    width: 180px;
+    height: 80px;
+  }
+  
+  .navbar {
+    margin-top: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ffffff;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  .single-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .site {
+    flex: 0 0 48%;
+  }
+  
+  .site h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: black;
+  }
+  
+  .site p {
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .container h1 {
+    font-size: 28px;
+    color:black;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+  
+  table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table td {
+    padding: 20px;
+  }
+  
+  table td h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  table td p {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background-color: #FFDE59;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer {
+    color: #000000;
+  }
+  
+  .btn_register,
+  .btn_login {
+    background-color: #008cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn_register:hover,
+  .btn_login:hover {
+    background-color: #0056b3;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .form-login,
+  .form-register {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .btn_register,
+  .btn_login {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .link-register {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 430px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .form-login,
+    .form-register {
+      width: 90%;
+    }
+  
+    .input,
+    .btn_register,
+    .btn_login {
+      font-size: 14px;
+    }
+  }
+  
+/* CSS untuk Carousel */
+.carousel-container {
+  max-width: 1150px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.carousel-slide {
+  position: relative;
+}
+
+.slide {
+  position: relative;
+  display: block;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.slide-image {
+  width: 1150px;
+  height: 400px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.prev {
+  left: -50px;
+}
+
+.next {
+  right: -50px;
+}

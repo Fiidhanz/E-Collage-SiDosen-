@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Image/logosidosen.png  ">
+    <title>E-Counting</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Image/logosidosenpng.png" alt="" weight="80" height="80">
+        </div>
+        <div class="navbar">
+            <a href="index.php">Home</a>
+            <a href="contact.php">Help</a>
+            <!-- Change the id of login button to trigger the popup -->
+            <a href="#" id="loginBtn">Login</a>
+        </div>
+    </header>
+    <main>
+        <center>
+            <h1>     E-Collage  </h1>
+            <p>Aplikasi Sistem Informasi Akademik Dosen</p>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <div class="slide">
+                        <img class="slide-image" src="../Image/SistemInformasi.jpg" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="../Image/gambar2.jpg" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-image" src="../Image/gambar3.jpg" alt="Slide 3">
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <script>
+                var slideIndex = 1;
+                function showSlides(n) {
+                    var slides = document.getElementsByClassName("slide");
+                    if (n > slides.length) {
+                        slideIndex = 1;
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length;
+                    }
+                    for (var i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                }
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+                showSlides(slideIndex);
+            </script>
+        </center>
+            <div class="site">
+                <center><h2>Pentingnya Sistem Informasi Akademik Dosen </h2></center>
+                <p>Sistem Informasi Akademik Dosen (E-Collage) sangat penting dalam meningkatkan efisiensi dan efektivitas operasional di lingkungan akademik. E-Collage mengotomatiskan tugas administratif, mengurangi kesalahan manusia, dan menyediakan akses cepat ke data penting. Ini memungkinkan dosen untuk fokus pada pengajaran dan penelitian, serta meningkatkan kualitas pengajaran melalui analisis data kinerja mahasiswa. Selain itu, E-Collage meningkatkan transparansi dan akuntabilitas, memfasilitasi komunikasi yang efektif, dan mendukung integrasi dengan sistem lain di universitas. Dengan menyediakan data yang akurat dan mudah diakses, E-Collage membantu manajemen dalam pengambilan keputusan yang lebih baik dan mendukung proses akreditasi dan audit. Secara keseluruhan, E-Collage menciptakan ekosistem akademik yang efisien, transparan, dan responsif terhadap kebutuhan semua pemangku kepentingan.</p>
+           <center> <img src="../Image/logosidosenpng.png" alt="" height="200"></center>
+            </div>
+        </div>
+        <div class="container">
+            <h1>APA ITU E-Collage?</h1>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <h3>Otomatisasi Proses Administrasi</h3>
+                    <p>E-Collage memungkinkan otomatisasi berbagai proses administrasi akademik seperti pengisian KRS (Kartu Rencana Studi), pendaftaran mata kuliah, pengolahan nilai, dan pembuatan laporan akademik. Hal ini mengurangi beban kerja administratif dosen dan staf, serta meminimalisir kesalahan manusia.</p>
+                </td>
+                <td>
+                    <h3>Akses Data yang Cepat dan Mudah</h3>
+                    <p>Dosen dapat dengan mudah mengakses data mahasiswa, jadwal perkuliahan, nilai, dan informasi akademik lainnya kapan saja dan dari mana saja. Ini meningkatkan fleksibilitas dan kenyamanan dalam melaksanakan tugas-tugas akademik.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Pengelolaan Nilai yang Efisien</h3>
+                    <p>Dengan E-Collage, dosen dapat memasukkan, memproses, dan mengelola nilai mahasiswa secara elektronik. Sistem ini dapat secara otomatis menghitung nilai akhir berdasarkan berbagai komponen penilaian, sehingga menghemat waktu dan mengurangi potensi kesalahan.</p>
+                </td>
+                <td>
+                    <h3>Analisis Data dan Pelaporan</h3>
+                    <p>E-Collage dilengkapi dengan fitur analisis data yang dapat digunakan untuk menghasilkan berbagai laporan akademik dan statistik. Informasi ini sangat berguna untuk pengambilan keputusan strategis oleh manajemen perguruan tinggi.
+
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <div class="container">
+            <p>Belum memiliki akun? Daftar sekarang!</p>
+            <button id="registerBtn" class="btn_register">Daftar Sekarang!</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h4>&copy; 2024 SiDosen 2218018</h4>
+        </div>
+    </footer>
+    
+    <!-- Add popup box after the footer -->
+    <div id="popupBox" class="popup-box">
+        <div class="popup-close"><a href="index.php" >X</a></div>
+        <div class="popup-content">
+            <h2>Belum punya akun?</h2>
+            <p>Silakan daftar terlebih dahulu untuk mengakses layanan kami.</p>
+            <a href="register.php" class="btn_register">Daftar Sekarang!</a>
+           <p><br>Sudah punya akun? | <a href="login.php" >Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Add JavaScript to show the popup box when the login button is clicked
+        var loginBtn = document.getElementById("loginBtn");
+        loginBtn.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            document.getElementById('popupBox').style.display = 'block'; // Show popup box
+        });
+
+        // Add JavaScript to hide the popup box when the register button is clicked
+        document.getElementById('registerBtn').addEventListener('click', function() {
+            document.getElementById('popupBox').style.display = 'none';
+        });
+
+        // Add JavaScript for the onload event to hide the popup box when the page is loaded
+        window.addEventListener('load', function() {
+            document.getElementById('popupBox').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
